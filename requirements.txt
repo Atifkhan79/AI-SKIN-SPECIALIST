@@ -1,0 +1,5 @@
+gradio==6.28.0
+groq==1.7.0
+deepgram-sdk==7.10.0
+python-dotenv==1.2.3
+pillow==12.3.0

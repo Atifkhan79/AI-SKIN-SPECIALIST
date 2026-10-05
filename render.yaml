@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ai-skin-specialist
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      # Secrets: leave empty here, paste the values in the Render dashboard
+      - key: GROQ_API_KEY
+        sync: false
+      - key: DEEPGRAM_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: meta-llama/llama-4-scout-17b-16e-instruct
+      - key: WHISPER_MODEL
+        value: whisper-large-v3
+ 
